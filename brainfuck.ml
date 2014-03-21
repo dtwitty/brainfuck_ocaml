@@ -114,7 +114,7 @@ let rec optimize_loop tree =
         | LOOP(l) :: tail -> begin
             let ol = optimize(l) in
             match ol with
-                | [ INCR_DATA(0, v)] -> ASSIGN(0, 0) :: optimize_loop tail
+                | [ INCR_DATA(0, v) ] -> ASSIGN(0, 0) :: optimize_loop tail
                 | _ -> LOOP(ol) :: optimize_loop tail
             end
         | head :: tail -> head :: optimize_loop tail
@@ -189,7 +189,7 @@ let print_c tree out =
     fprintf out "}\n";;
 
 let help () = 
-    let () = printf "Brainfuck compiler/interpreter useage: " in
+    let () = printf "Brainfuck compiler/interpreter usage: " in
     let () = printf "cmd [-iO] <brainfuck file>\n" in
     let () = printf "if -i is set, interprets the file directly " in
     let () = printf "otherwise compiles to out.c\n" in

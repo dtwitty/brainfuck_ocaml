@@ -3,7 +3,7 @@ brainfuck_ocaml
 
 A brainfuck interpreter and optimizing compiler
 
-Useage: ./bf [-iO] <brainfuck file>
+Usage: ./bf [-iO] <brainfuck file>
 
 If -i is set, interprets the file directly otherwise compiles to out.c
 
