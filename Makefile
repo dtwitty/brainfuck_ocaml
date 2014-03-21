@@ -69,7 +69,7 @@
 #
 # The Caml sources (including camlyacc and camllex source files)
 
-SOURCES = lexer.mll parser.mly parseTree.ml brainFuck.ml
+SOURCES = parser.mly lexer.mll parseTree.ml brainfuck.ml
 
 # The executable file to generate
 
@@ -143,7 +143,7 @@ $(EXEC): $(OBJS)
 	$(CAMLC) $(CUSTOM) -o $(EXEC) $(LIBS) $(OBJS)
 
 # $(EXEC)-opt: $(OPTOBJS)
-#	$(CAMLOPT) -o $(EXEC) $(LIBS:.cma=.cmxa) $(OPTOBJS)
+# 	$(CAMLOPT) -o $(EXEC) $(LIBS:.cma=.cmxa) $(OPTOBJS)
 
 .SUFFIXES: .ml .mli .cmo .cmi .cmx .mll .mly 
 
